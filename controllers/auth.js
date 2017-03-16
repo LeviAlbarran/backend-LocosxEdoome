@@ -18,14 +18,10 @@ User.findOne({correo: correo}, function(err, user) {
             // que definamos en el Schema
             // nombre, email, etc...
         id: req.body.id,
-        id_congregacion: req.body.id_congregacion,
         nombre: req.body.nombre,
         correo: req.body.correo,
         clave: req.body.clave,
-        lat: req.body.lat,
-        lng: req.body.lng,
         nivel: req.body.nivel,
-        activacion: req.body.activacion
         });
 
         user.save(function(err){
@@ -52,25 +48,10 @@ console.log(req.body);
         if (user) {
             if (user.clave==clave) {
     
-                if(user.activacion=="1"){
-                    if(user.id_congregacion = 1){
-                        //user.conexion = "http://localhost:5000/api";
-                        user.conexion = "http://node-territorios.herokuapp.com/api";             
-                        console.log("italiano Maracaibo");
-                    }
-                    else if(user.id_congregacion = 2){
-                      //  user.conexion = "http://localhost:5000/api"; 
-                        user.conexion = "http://node-territorios.herokuapp.com/api";        
-                        console.log("Aruba Español");
-                    }
                   return res
                   .status(200)
                   .send({token: service.createToken(user)});
-                }else{
-                 return res
-                 .status(200)
-                 .send({response: "En espera de activacion. Comuniquese con el Encargado de territorios"});     
-                }
+   
 
             }else{
                 return res
