@@ -1,0 +1,33 @@
+{
+  "name": "node-locosxEdoome",
+  "version": "0.1",
+  "description": "",
+  "engines": {
+    "node": "5.9.1"
+  },
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "2.4.1",
+    "express":"latest",
+    "mongoose":"latest",
+    "node-restful":"latest",
+    "body-parser":"latest",
+    "cors":"latest",
+    "jwt-simple":"latest",
+    "moment":"latest",
+    "mongoose-auto-increment":"latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
+  "license": "MIT"
+}
