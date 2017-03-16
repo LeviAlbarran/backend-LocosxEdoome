@@ -8,6 +8,6 @@ var usuariosSchema = new mongoose.Schema({
 	clave: String,
 	nivel: Number,
 	objetivos: Number
-
+	puntuacion: []
 });
 module.exports = restful.model('usuarios', usuariosSchema);
